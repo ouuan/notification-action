@@ -1,6 +1,6 @@
-name: 'Notification Messages'
+name: "Notification Messages"
 
-description: 'Get the notification message'
+description: "Get the notification message"
 
 inputs:
   format:
@@ -8,21 +8,21 @@ inputs:
     required: false
     default: plaintext
   event-name:
-    description: 'The name of the webhook event.'
+    description: "The name of the webhook event."
     required: false
     default: ${{ github.event_name }}
   event-json:
-    description: 'The webhook event converted to JSON.'
+    description: "The webhook event converted to JSON."
     required: false
     default: ${{ toJSON(github.event) }}
 
 outputs:
   message:
-    description: 'The notification message'
+    description: "The notification message"
 
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: "docker"
+  image: "Dockerfile"
   args:
     - ${{ inputs.format }}
     - ${{ inputs.event-name }}

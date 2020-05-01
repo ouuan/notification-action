@@ -7,6 +7,8 @@ GitHub Actions for generating notification messages for various GitHub webhook e
 
 ## Get Started
 
+Create `.github/workflows/notification.yml` with the following content:
+
 ```yaml
 name: Notification
 on: [push]
@@ -14,13 +16,13 @@ jobs:
   notification:
     runs-on: ubuntu-latest
     steps:
-    - name: "Get the message"
-      uses: ouuan/notification-action@master
-      id: get-message
-      with:
-      	format: markdown
-    - name: "Output the message"
-      run: echo '${{ steps.get-message.outputs.message }}'
+      - name: "Get the message"
+        uses: ouuan/notification-action@master
+        id: get-message
+        with:
+          format: markdown
+      - name: "Output the message"
+        run: echo '${{ steps.get-message.outputs.message }}'
 ```
 
 ## Demo
@@ -75,13 +77,13 @@ jobs:
   notification:
     runs-on: ubuntu-latest
     steps:
-    - name: "Get the message"
-      uses: ouuan/notification-action@master
-      id: get-message
-    - name: "Send the message"
-      uses: appleboy/telegram-action@master
-      with:
-        to: ${{ secrets.TELEGRAM_TO }}
-        token: ${{ secrets.TELEGRAM_TOKEN }}
-        args: ${{ steps.get-message.outputs.message }}
+      - name: "Get the message"
+        uses: ouuan/notification-action@master
+        id: get-message
+      - name: "Send the message"
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          args: ${{ steps.get-message.outputs.message }}
 ```
