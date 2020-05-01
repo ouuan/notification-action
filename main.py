@@ -44,12 +44,12 @@ def pushMessage(e, messageFormat):
 
 if __name__ == "__main__":
     if (len(sys.argv) != 4):
-        print('python main.py <event type> <event json> <use markdown>')
+        print('python main.py <format> <event-type> <event-json>')
         raise Exception('The number of arguments is {}, expected 3'.format(len(sys.argv) - 1))
 
-    eventType = sys.argv[1]
-    eventJson = json.loads(sys.argv[2])
-    messageFormat = sys.argv[3]
+    messageFormat = sys.argv[1]
+    eventType = sys.argv[2]
+    eventJson = json.loads(sys.argv[3])
 
     if eventType == 'push':
         print(pushMessage(eventJson, messageFormat))

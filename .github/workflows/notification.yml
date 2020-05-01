@@ -1,4 +1,4 @@
-name: Notification
+name: CI Test
 
 on: push
 

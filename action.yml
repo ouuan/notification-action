@@ -1,10 +1,12 @@
-# action.yml
-
 name: 'Notification Messages'
 
 description: 'Get the notification message'
 
 inputs:
+  format:
+    description: 'The output format. Possible values: "markdown", "plaintext".'
+    required: false
+    default: plaintext
   event-name:
     description: 'The name of the webhook event.'
     required: false
@@ -13,10 +15,6 @@ inputs:
     description: 'The webhook event converted to JSON.'
     required: false
     default: ${{ toJSON(github.event) }}
-  format:
-    description: 'The output format. Possible values: "markdown", "plaintext".'
-    required: false
-    default: plaintext
 
 outputs:
   message:
@@ -26,6 +24,6 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
+    - ${{ inputs.format }}
     - ${{ inputs.event-name }}
     - ${{ inputs.event-json }}
-    - ${{ inputs.format }}
