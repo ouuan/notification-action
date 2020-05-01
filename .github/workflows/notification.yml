@@ -6,8 +6,20 @@ jobs:
   notification:
     runs-on: ubuntu-latest
     steps:
-    - name: "Get the message"
+    - name: "Get the plain text message"
       uses: ouuan/notification-action@master
-      id: get-message
-    - name: "Output the message"
-      run: echo '${{ steps.get-message.outputs.message }}'
+      id: plaintext-message
+      with:
+        format: plaintext
+
+    - name: "Output the plain text message"
+      run: echo '${{ steps.plaintext-message.outputs.message }}'
+
+    - name: "Get the Markdown message"
+      uses: ouuan/notification-action@master
+      id: markdown-message
+      with:
+        format: markdown
+
+    - name: "Output the Markdown message"
+      run: echo '${{ steps.markdown-message.outputs.message }}'

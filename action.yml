@@ -5,14 +5,18 @@ name: 'Notification Messages'
 description: 'Get the notification message'
 
 inputs:
-  event_name:
-    description: 'The webhook event name'
+  event-name:
+    description: 'The name of the webhook event.'
     required: false
     default: ${{ github.event_name }}
-  event_json:
-    description: 'The webhook event converted to JSON'
+  event-json:
+    description: 'The webhook event converted to JSON.'
     required: false
     default: ${{ toJSON(github.event) }}
+  format:
+    description: 'The output format. Possible values: "markdown", "plaintext".'
+    required: false
+    default: plaintext
 
 outputs:
   message:
@@ -22,5 +26,6 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.event_name }}
-    - ${{ inputs.event_json }}
+    - ${{ inputs.event-name }}
+    - ${{ inputs.event-json }}
+    - ${{ inputs.format }}
