@@ -1,8 +1,8 @@
 import sys
 import json
 
-def pushMessage(e, format):
-    if format == 'markdown':
+def pushMessage(e, messageFormat):
+    if messageFormat == 'markdown':
         commits = e['commits']
         forced = bool(e['forced'])
         compareUrl = e['compare']
@@ -22,7 +22,7 @@ def pushMessage(e, format):
             commitMessage = commit['message']
             message += '[{}]({}) - {} by.{}  \n'.format(shortSHA, url, commitMessage, author)
         return message
-    elif format == 'plaintext':
+    elif messageFormat == 'plaintext':
         commits = e['commits']
         forced = bool(e['forced'])
         repoName = e['repository']['full_name']
@@ -49,9 +49,9 @@ if __name__ == "__main__":
 
     eventType = sys.argv[1]
     eventJson = json.loads(sys.argv[2])
-    format = sys.argv[3]
+    messageFormat = sys.argv[3]
 
     if eventType == 'push':
-        print(pushMessage(eventJson, format))
+        print(pushMessage(eventJson, messageFormat))
     else:
         raise Exception('The event type {} is unsupported'.format(eventType))
