@@ -1,5 +1,13 @@
 #!/bin/bash
 
-# not using $(python /main.py "$1" "$2") because it exit with code 0 when error occurrs
-set -eo pipefail
-python /main.py "$1" "$2" | xargs -I MESSAGE echo "::set-output name=message::MESSAGE"
+set -e
+
+MESSAGE=$(python /main.py "$1" "$2")
+
+# escape characters
+# https://github.community/t5/GitHub-Actions/set-output-Truncates-Multiline-Strings/m-p/38372#M3322
+MESSAGE="${MESSAGE//'%'/'%25'}"
+MESSAGE="${MESSAGE//$'\n'/'%0A'}"
+MESSAGE="${MESSAGE//$'\r'/'%0D'}"
+
+echo "::set-output name=message::$MESSAGE"
