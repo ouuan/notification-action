@@ -1,0 +1,26 @@
+# action.yml
+
+name: 'Notification Messages'
+
+description: 'Get the notification message'
+
+inputs:
+  event_name:
+    description: 'The webhook event name'
+    required: false
+    default: ${{ github.event_name }}
+  event_json:
+    description: 'The webhook event converted to JSON'
+    required: false
+    default: ${{ toJSON(github.event) }}
+
+outputs:
+  message:
+    description: 'The notification message'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.event_name }}
+    - ${{ inputs.event_json }}

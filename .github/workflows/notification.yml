@@ -1,0 +1,13 @@
+name: Notification
+
+on: push
+
+jobs:
+  notification:
+    runs-on: ubuntu-latest
+    steps:
+    - name: "Get the message"
+      uses: ouuan/notification-action@master
+      id: get-message
+    - name: "Output the message"
+      run: echo '${{ steps.get-message.outputs.message }}'
