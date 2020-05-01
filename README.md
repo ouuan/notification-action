@@ -87,3 +87,9 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           args: ${{ steps.get-message.outputs.message }}
 ```
+
+## Contrubuting
+
+1.  Improve the document.
+2.  Add ideas for new messages / better messages in [Issues](https://github.com/ouuan/notification-action/issues).
+3.  Add messages for more events and more formats and improve the current messages. Just add codes in [main.py](main.py), you can refer to [Event Types & Payloads | GitHub Developer Guide](https://developer.github.com/v3/activity/events/types/) or the outputs in the GitHub Actions runs.
