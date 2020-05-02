@@ -30,14 +30,14 @@ jobs:
 ### Plain Text
 
 ```plaintext
-ouuan forced-pushed 1 commit to ouuan/notification-action:master:
+ouuan forced-pushed 1 commit to notification-action:master:
 
 49b264e - feat: Add format option by.ouuan
 ```
 
 ### Markdown
 
-> ouuan pushed [2 commits](https://github.com/ouuan/notification-action/compare/49b264ec0ff0...fdf637251330) to [ouuan/notification-action](https://github.com/ouuan/notification-action):[master](https://github.com/ouuan/notification-action/tree/master):
+> ouuan pushed [2 commits](https://github.com/ouuan/notification-action/compare/49b264ec0ff0...fdf637251330) to [notification-action](https://github.com/ouuan/notification-action):[master](https://github.com/ouuan/notification-action/tree/master):
 >
 > [f7e4c1c](https://github.com/ouuan/notification-action/commit/f7e4c1cdb2b2a92277f25fab8bcc827e466aa89a) - refactor: Fix Codacy issue by.ouuan  
 > [fdf6372](https://github.com/ouuan/notification-action/commit/fdf6372513306d995930ea62eaf151564f8103b4) - refactor: Change the order of inputs by.ouuan 
@@ -92,4 +92,4 @@ jobs:
 
 1.  Improve the document.
 2.  Add ideas for new messages / better messages in [Issues](https://github.com/ouuan/notification-action/issues).
-3.  Add messages for more events and more formats and improve the current messages. Just add new files `events/xxx.py` and add codes in [main.py](main.py), you can refer to [Event Types & Payloads | GitHub Developer Guide](https://developer.github.com/v3/activity/events/types/) or the outputs in the GitHub Actions runs.
+3.  Add messages for more events and more formats and improve the current messages. Just add new files `webhook2message/xxx.py` and add codes in [main.py](main.py), you can refer to [Event Types & Payloads | GitHub Developer Guide](https://developer.github.com/v3/activity/events/types/) or the outputs in the GitHub Actions runs.

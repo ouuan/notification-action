@@ -1,8 +1,8 @@
 import sys
 import json
 
-import events.formatter
-import events.push
+import webhook2message.partials as p
+import webhook2message.push as push
 
 if __name__ == "__main__":
     if (len(sys.argv) != 4):
@@ -14,9 +14,9 @@ if __name__ == "__main__":
     eventJson = json.loads(sys.argv[2])
     messageFormat = sys.argv[3]
 
-    events.formatter.setFormat(messageFormat)
+    p.setFormat(messageFormat)
 
     if eventName == 'push':
-        print(events.push.message(eventJson))
+        print(push.message(eventJson))
     else:
         raise Exception('The event "{}" is unsupported'.format(eventName))
