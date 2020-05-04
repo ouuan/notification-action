@@ -40,11 +40,11 @@ ouuan forced-pushed 1 commit to notification-action:master:
 > ouuan pushed [2 commits](https://github.com/ouuan/notification-action/compare/49b264ec0ff0...fdf637251330) to [notification-action](https://github.com/ouuan/notification-action):[master](https://github.com/ouuan/notification-action/tree/master):
 >
 > [f7e4c1c](https://github.com/ouuan/notification-action/commit/f7e4c1cdb2b2a92277f25fab8bcc827e466aa89a) - refactor: Fix Codacy issue by.ouuan  
-> [fdf6372](https://github.com/ouuan/notification-action/commit/fdf6372513306d995930ea62eaf151564f8103b4) - refactor: Change the order of inputs by.ouuan 
+> [fdf6372](https://github.com/ouuan/notification-action/commit/fdf6372513306d995930ea62eaf151564f8103b4) - refactor: Change the order of inputs by.ouuan  
 
 ### Tests
 
-You can see more examples in the `tests` folder.
+You can see more examples in the [tests](tests) folder.
 
 ## Inputs
 
@@ -101,8 +101,9 @@ jobs:
 -   Add messages for more events and more formats and improve the current messages.
 
     Usually you need to modify:
-        1. `webhook2message/xxx.py`
-        2. [`__init__.py`](webhook2message/__init__.py)
-        3. `tests/xxx.json`
+
+    1.  `webhook2message/xxx.py`
+    2.  [`__init__.py`](webhook2message/__init__.py)
+    3.  `tests/xxx.json`
 
     You can refer to [Event Types & Payloads | GitHub Developer Guide](https://developer.github.com/v3/activity/events/types/), the [tests](tests) and the outputs in the GitHub Actions runs.
