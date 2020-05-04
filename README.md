@@ -102,7 +102,7 @@ jobs:
 
     Usually you need to modify:
         1. `webhook2message/xxx.py`
-        2. [__init__.py](webhook2message/__init__.py)
+        2. [`__init__.py`](webhook2message/__init__.py)
         3. `tests/xxx.json`
 
     You can refer to [Event Types & Payloads | GitHub Developer Guide](https://developer.github.com/v3/activity/events/types/), the [tests](tests) and the outputs in the GitHub Actions runs.
