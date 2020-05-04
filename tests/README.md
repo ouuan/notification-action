@@ -4,7 +4,7 @@
 
 The tests are stored as JSON files, the tests for each event are stored in separate files, the structure of each file is:
 
-```json
+```plaintext
 [
     {
         "name": <string: event-name>,
