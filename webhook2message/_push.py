@@ -1,4 +1,4 @@
-import webhook2message.partials as p
+import webhook2message._partials as p
 
 
 def message(e):
