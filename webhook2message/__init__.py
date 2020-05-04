@@ -2,6 +2,15 @@ from webhook2message import _partials, _push
 
 
 def message(eventName, eventJson, messageFormat):
+    """Generate the notification message for a webhook event.
+
+    `eventName` is the name of the webhook event.
+
+    `eventJson` is the webhook in JSON format.
+
+    `messageFormat` is the format of the message.
+    """
+
     _partials.setFormat(messageFormat)
 
     if eventName == 'push':
