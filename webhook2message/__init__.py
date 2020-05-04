@@ -1,4 +1,4 @@
-from webhook2message import _partials, _push
+from webhook2message import _partials
 
 
 def message(eventName, eventJson, messageFormat):
@@ -14,6 +14,7 @@ def message(eventName, eventJson, messageFormat):
     _partials.setFormat(messageFormat)
 
     if eventName == 'push':
+        from webhook2message import _push
         return _push.message(eventJson)
     else:
         raise Exception(f'The event "{eventName}" is unsupported')

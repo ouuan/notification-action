@@ -1,7 +1,6 @@
 import json
 import sys
-from os import listdir
-from os.path import isfile, join
+
 import webhook2message as msg
 
 
@@ -27,6 +26,8 @@ generated message: "{message}"''')
 
 if __name__ == "__main__":
     if len(sys.argv) == 1:
+        from os import listdir
+        from os.path import isfile, join
         tests = [f[:-5]
                  for f in listdir('tests') if isfile(join('tests', f)) and f[-5:] == '.json']
     else:
