@@ -8,7 +8,7 @@ if __name__ == "__main__":
     if (len(sys.argv) != 4):
         print('python main.py <event-name> <event-json> <format>')
         raise Exception(
-            'The number of arguments is {}, expected 3'.format(len(sys.argv) - 1))
+            f'The number of arguments is {len(sys.argv) - 1}, expected 3')
 
     eventName = sys.argv[1]
     eventJson = json.loads(sys.argv[2])
@@ -19,4 +19,4 @@ if __name__ == "__main__":
     if eventName == 'push':
         print(push.message(eventJson))
     else:
-        raise Exception('The event "{}" is unsupported'.format(eventName))
+        raise Exception(f'The event "{eventName}" is unsupported')

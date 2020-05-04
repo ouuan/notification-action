@@ -4,14 +4,13 @@ _messageFormat = 'plaintext'
 def _unsupported(partialName):
     global _messageFormat
     raise Exception(
-        'The partial "{}" is not supported in format "{}".'.format(partialName, _messageFormat))
+        f'The partial "{partialName}" is not supported in format "{_messageFormat}".')
 
 
 def setFormat(messageFormat):
     global _messageFormat
     if messageFormat not in ['plaintext', 'markdown']:
-        raise Exception(
-            'The format "{}" is unsupported.'.format(messageFormat))
+        raise Exception(f'The format "{messageFormat}" is unsupported.')
     _messageFormat = messageFormat
 
 
@@ -20,7 +19,7 @@ def link(title, url):
     if (_messageFormat == 'plaintext'):
         return title
     elif (_messageFormat == 'markdown'):
-        return '[{}]({})'.format(title, url)
+        return f'[{title}]({url})'
     else:
         _unsupported('link')
 
@@ -55,10 +54,10 @@ def ref(ref, repo):
     repoUrl = repo['html_url']
     if ref[:11] == 'refs/heads/':
         branch = ref[11:]
-        return link(branch, '{}/tree/{}'.format(repoUrl, branch))
+        return link(branch, f'{repoUrl}/tree/{branch}')
     elif ref[:10] == 'refs/tags/':
         tag = ref[10:]
-        return link(tag, '{}/releases/tag/{}'.format(repoUrl, tag))
+        return link(tag, f'{repoUrl}/releases/tag/{tag}')
     else:
         return ref
 
@@ -68,4 +67,4 @@ def commit(commit):
     url = commit['url']
     author = commit['author']['name']
     commitMessage = commit['message']
-    return '{} - {} by.{}'.format(link(shortSHA, url), commitMessage, author)
+    return f'{link(shortSHA, url)} - {commitMessage} by.{author}'
