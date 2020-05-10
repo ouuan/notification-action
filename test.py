@@ -12,7 +12,7 @@ def runTest(name):
         for fmt in test['formats']:
             message = msg.message(test['name'], test['event'], fmt['format'])
             if message != fmt['message']:
-                raise Exception(f'''event-name: <{test["name"]}>
+                raise Exception(f'''event-name: "{test['name']}"
 
 event-json: "{test["event"]}"
 
