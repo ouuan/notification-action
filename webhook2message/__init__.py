@@ -16,5 +16,8 @@ def message(eventName, eventJson, messageFormat):
     if eventName == 'push':
         from webhook2message import _push
         return _push.message(eventJson)
+    elif eventName == 'pull_request':
+        from webhook2message import _pull_request
+        return _pull_request.message(eventJson)
     else:
         raise Exception(f'The event "{eventName}" is unsupported')
