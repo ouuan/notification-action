@@ -180,11 +180,11 @@
         "formats": [
             {
                 "format": "plaintext",
-                "message": "ouuan forced-pushed 1 commit to notification-action:master:\n\n49b264e - feat: Add format option by.ouuan\n"
+                "message": "ouuan forced-pushed 1 commit to notification-action:master:\n\n49b264e - feat: Add format option by. ouuan\n"
             },
             {
                 "format": "markdown",
-                "message": "ouuan forced-pushed [1 commit](https://github.com/ouuan/notification-action/compare/59b5023a4c8c...49b264ec0ff0) to [notification-action](https://github.com/ouuan/notification-action):[master](https://github.com/ouuan/notification-action/tree/master):\n\n[49b264e](https://github.com/ouuan/notification-action/commit/49b264ec0ff0963b876f58e64e1916e3e55cb50b) - feat: Add format option by.ouuan  \n"
+                "message": "ouuan forced-pushed [1 commit](https://github.com/ouuan/notification-action/compare/59b5023a4c8c...49b264ec0ff0) to [notification-action](https://github.com/ouuan/notification-action):[master](https://github.com/ouuan/notification-action/tree/master):\n\n[49b264e](https://github.com/ouuan/notification-action/commit/49b264ec0ff0963b876f58e64e1916e3e55cb50b) - feat: Add format option by. ouuan  \n"
             }
         ]
     },
@@ -387,11 +387,11 @@
         "formats": [
             {
                 "format": "plaintext",
-                "message": "ouuan pushed 2 commits to notification-action:master:\n\nf7e4c1c - refactor: Fix Codacy issue by.ouuan\nfdf6372 - refactor: Change the order of inputs by.ouuan\n"
+                "message": "ouuan pushed 2 commits to notification-action:master:\n\nf7e4c1c - refactor: Fix Codacy issue by. ouuan\nfdf6372 - refactor: Change the order of inputs by. ouuan\n"
             },
             {
                 "format": "markdown",
-                "message": "ouuan pushed [2 commits](https://github.com/ouuan/notification-action/compare/49b264ec0ff0...fdf637251330) to [notification-action](https://github.com/ouuan/notification-action):[master](https://github.com/ouuan/notification-action/tree/master):\n\n[f7e4c1c](https://github.com/ouuan/notification-action/commit/f7e4c1cdb2b2a92277f25fab8bcc827e466aa89a) - refactor: Fix Codacy issue by.ouuan  \n[fdf6372](https://github.com/ouuan/notification-action/commit/fdf6372513306d995930ea62eaf151564f8103b4) - refactor: Change the order of inputs by.ouuan  \n"
+                "message": "ouuan pushed [2 commits](https://github.com/ouuan/notification-action/compare/49b264ec0ff0...fdf637251330) to [notification-action](https://github.com/ouuan/notification-action):[master](https://github.com/ouuan/notification-action/tree/master):\n\n[f7e4c1c](https://github.com/ouuan/notification-action/commit/f7e4c1cdb2b2a92277f25fab8bcc827e466aa89a) - refactor: Fix Codacy issue by. ouuan  \n[fdf6372](https://github.com/ouuan/notification-action/commit/fdf6372513306d995930ea62eaf151564f8103b4) - refactor: Change the order of inputs by. ouuan  \n"
             }
         ]
     }

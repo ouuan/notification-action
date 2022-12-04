@@ -468,11 +468,11 @@
         "formats": [
             {
                 "format": "plaintext",
-                "message": "New pull request notification-action#1 This is a sample pull request used for testing\nby. ouuan\n\nThis is the body of the sample pull request.\r\n\r\nIt has multiline so that we can test if it works fine with multiline text.\r\n\r\n> Some [Markdown](https:\/\/en.wikipedia.org\/wiki\/Markdown) are also _good_ for **testing**."
+                "message": "New pull request notification-action#1 This is a sample pull request used for testing\nby: @ouuan\n\nThis is the body of the sample pull request.\r\n\r\nIt has multiline so that we can test if it works fine with multiline text.\r\n\r\n> Some [Markdown](https:\/\/en.wikipedia.org\/wiki\/Markdown) are also _good_ for **testing**."
             },
             {
                 "format": "markdown",
-                "message": "New pull request [notification-action#1 This is a sample pull request used for testing](https:\/\/github.com\/ouuan\/notification-action\/pull\/1)  \nby. [ouuan](https:\/\/github.com\/ouuan)\n\nThis is the body of the sample pull request.\r\n\r\nIt has multiline so that we can test if it works fine with multiline text.\r\n\r\n> Some [Markdown](https:\/\/en.wikipedia.org\/wiki\/Markdown) are also _good_ for **testing**."
+                "message": "New pull request [notification-action#1 This is a sample pull request used for testing](https:\/\/github.com\/ouuan\/notification-action\/pull\/1)  \nby: [@ouuan](https:\/\/github.com\/ouuan)\n\nThis is the body of the sample pull request.\r\n\r\nIt has multiline so that we can test if it works fine with multiline text.\r\n\r\n> Some [Markdown](https:\/\/en.wikipedia.org\/wiki\/Markdown) are also _good_ for **testing**."
             }
         ]
     }

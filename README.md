@@ -32,15 +32,15 @@ jobs:
 ```plaintext
 ouuan forced-pushed 1 commit to notification-action:master:
 
-49b264e - feat: Add format option by.ouuan
+49b264e - feat: Add format option by. ouuan
 ```
 
 ### Markdown
 
 > ouuan pushed [2 commits](https://github.com/ouuan/notification-action/compare/49b264ec0ff0...fdf637251330) to [notification-action](https://github.com/ouuan/notification-action):[master](https://github.com/ouuan/notification-action/tree/master):
 >
-> [f7e4c1c](https://github.com/ouuan/notification-action/commit/f7e4c1cdb2b2a92277f25fab8bcc827e466aa89a) - refactor: Fix Codacy issue by.ouuan  
-> [fdf6372](https://github.com/ouuan/notification-action/commit/fdf6372513306d995930ea62eaf151564f8103b4) - refactor: Change the order of inputs by.ouuan  
+> [f7e4c1c](https://github.com/ouuan/notification-action/commit/f7e4c1cdb2b2a92277f25fab8bcc827e466aa89a) - refactor: Fix Codacy issue by. ouuan  
+> [fdf6372](https://github.com/ouuan/notification-action/commit/fdf6372513306d995930ea62eaf151564f8103b4) - refactor: Change the order of inputs by. ouuan  
 
 ### Tests
 

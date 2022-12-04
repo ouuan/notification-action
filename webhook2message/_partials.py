@@ -67,7 +67,11 @@ def commit(commit):
     url = commit['url']
     author = commit['author']['name']
     commitMessage = commit['message']
-    return f'{link(shortSHA, url)} - {commitMessage} by.{author}'
+    return f'{link(shortSHA, url)} - {commitMessage} by. {author}'
+
+
+def user(user):
+    return link(f"@{user['login']}", user['html_url'])
 
 
 def prHead(pr):
@@ -75,9 +79,7 @@ def prHead(pr):
     number = pr['number']
     title = pr['title']
     repoName = pr['base']['repo']['name']
-    userName = pr['user']['login']
-    userUrl = pr['user']['html_url']
-    return f'{link(f"{repoName}#{number} {title}", url)}{br()}by. {link(userName, userUrl)}'
+    return f'{link(f"{repoName}#{number} {title}", url)}{br()}by: {user(pr["user"])}'
 
 
 def prBody(pr):

@@ -236,11 +236,11 @@
         "formats": [
             {
                 "format": "plaintext",
-                "message": "New comment on webhook-test#1 Welcome to webhook-test Discussions! by Enter-tainer\n\ntest reply"
+                "message": "New comment on webhook-test#1 Welcome to webhook-test Discussions! by @Enter-tainer\n\ntest reply"
             },
             {
                 "format": "markdown",
-                "message": "New comment on [webhook-test#1 Welcome to webhook-test Discussions!](https://github.com/Enter-tainer/webhook-test/discussions/1#discussioncomment-4306407) by [Enter-tainer](https://github.com/Enter-tainer)\n\ntest reply"
+                "message": "New comment on [webhook-test#1 Welcome to webhook-test Discussions!](https://github.com/Enter-tainer/webhook-test/discussions/1#discussioncomment-4306407) by [@Enter-tainer](https://github.com/Enter-tainer)\n\ntest reply"
             }
         ]
     }
