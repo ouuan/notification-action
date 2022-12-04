@@ -19,5 +19,8 @@ def message(eventName, eventJson, messageFormat):
     elif eventName == 'pull_request':
         from webhook2message import _pull_request
         return _pull_request.message(eventJson)
+    elif eventName == 'discussion_comment':
+        from webhook2message import _discussion_comment
+        return _discussion_comment.message(eventJson)
     else:
         raise Exception(f'The event "{eventName}" is unsupported')
