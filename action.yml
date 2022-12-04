@@ -23,7 +23,7 @@ outputs:
 runs:
   using: "docker"
   image: "Dockerfile"
-  args:
-    - ${{ inputs.event-name }}
-    - ${{ inputs.event-json }}
-    - ${{ inputs.format }}
+  env:
+    EVENT_NAME: ${{ inputs.event-name }}
+    EVENT_JSON: ${{ inputs.event-json }}
+    FORMAT: ${{ inputs.format }}
