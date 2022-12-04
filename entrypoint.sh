@@ -1,13 +1,10 @@
 #!/bin/bash
 
-set -e
+set -eu
 
-MESSAGE=$(python /main.py "$1" "$2" "$3")
+message="$(python /main.py "$1" "$2" "$3")"
+delimiter="$(tr -dc A-Za-z </dev/urandom | head -c 50)"
 
-# escape characters
-# https://github.community/t5/GitHub-Actions/set-output-Truncates-Multiline-Strings/m-p/38372#M3322
-MESSAGE="${MESSAGE//'%'/'%25'}"
-MESSAGE="${MESSAGE//$'\n'/'%0A'}"
-MESSAGE="${MESSAGE//$'\r'/'%0D'}"
-
-echo "message=$MESSAGE" >> "$GITHUB_OUTPUT"
+echo "message<<$delimiter
+$message
+$delimiter" >> "$GITHUB_OUTPUT"
