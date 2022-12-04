@@ -10,4 +10,4 @@ MESSAGE="${MESSAGE//'%'/'%25'}"
 MESSAGE="${MESSAGE//$'\n'/'%0A'}"
 MESSAGE="${MESSAGE//$'\r'/'%0D'}"
 
-echo "::set-output name=message::$MESSAGE"
+echo "message=$MESSAGE" >> "$GITHUB_OUTPUT"
