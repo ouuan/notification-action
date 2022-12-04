@@ -16,7 +16,9 @@ jobs:
           format: plaintext
 
       - name: "Output the plain text message"
-        run: echo '${{ steps.plaintext-message.outputs.message }}'
+        env:
+          MESSAGE: ${{ steps.plaintext-message.outputs.message }}
+        run: echo "$MESSAGE"
 
       - name: "Get the Markdown message"
         uses: ouuan/notification-action@master
@@ -25,4 +27,6 @@ jobs:
           format: markdown
 
       - name: "Output the Markdown message"
-        run: echo '${{ steps.markdown-message.outputs.message }}'
+        env:
+          MESSAGE: ${{ steps.markdown-message.outputs.message }}
+        run: echo "$MESSAGE"
