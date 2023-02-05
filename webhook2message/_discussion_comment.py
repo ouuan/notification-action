@@ -10,7 +10,7 @@ def message(e):
     title =  p.link(f"{repo['name']}#{discussion['number']} {discussion['title']}", comment['html_url'])
 
     if action == 'created':
-        return p.paragraph(f"New comment on {title} by {p.user(comment['user'])}") + comment['body']
+        return p.paragraph(f"New {'reply' if comment['parent_id'] else 'comment'} on {title} by {p.user(comment['user'])}") + comment['body']
     else:
         raise Exception(
             f'The action {action} in the discussion_comment event is not supported.')
